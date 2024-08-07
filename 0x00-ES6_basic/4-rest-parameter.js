@@ -1,3 +1,9 @@
 export default function returnHowManyArguments(...args) {
-    return args.length;
+    let len = 0;
+
+    for (const _ of args) {
+        len += 1;
+    }
+
+    return len;
 }
