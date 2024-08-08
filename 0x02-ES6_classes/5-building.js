@@ -2,6 +2,7 @@ export default class Building {
   constructor(sqft) {
     this.sqft = sqft;
 
+    /* eslint-disable-next-line eqeqeq */
     if (this.constructor != Building && this.evacuationWarningMessage == undefined) {
       throw new Error('Class extending Building must override evacuationWarningMessage');
     }
