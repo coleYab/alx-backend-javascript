@@ -9,5 +9,8 @@ export default function cleanSet(set, startString) {
 
   const initVal = (cleanArr.length == 0) ? '' : cleanArr[0];
 
+  if (cleanArr.length <= 1)
+    return initVal;
+
   return cleanArr.slice(1).reduce((a, b) => `${a}-${b}`, initVal);
 }
