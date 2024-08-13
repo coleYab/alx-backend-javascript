@@ -7,10 +7,9 @@ export default function cleanSet(set, startString) {
     ).map((item) => item.replace(startString, ''));
   }
 
-  const initVal = (cleanArr.length == 0) ? '' : cleanArr[0];
+  const initVal = (cleanArr.length === 0) ? '' : cleanArr[0];
 
-  if (cleanArr.length <= 1)
-    return initVal;
+  if (cleanArr.length <= 1) return initVal;
 
   return cleanArr.slice(1).reduce((a, b) => `${a}-${b}`, initVal);
 }
