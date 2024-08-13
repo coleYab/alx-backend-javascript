@@ -12,15 +12,15 @@
 // gullame, john
 // You must use filter and map combined.
 export default function updateStudentGradeByCity(students, city, newGrades) {
-    return students.filter(student => student.location == city).map(student => {
-        let score = 'N/A';
-        
-        for (let stuScore of newGrades) {
-            if (student.id === stuScore.studentId) {
-                score = stuScore.grade;
-            }
-        }
+  return students.filter((student) => student.location == city).map((student) => {
+    let score = 'N/A';
 
-        return {...student, grade: score};
-    });
+    for (const stuScore of newGrades) {
+      if (student.id === stuScore.studentId) {
+        score = stuScore.grade;
+      }
+    }
+
+    return { ...student, grade: score };
+  });
 }

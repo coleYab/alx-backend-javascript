@@ -13,5 +13,5 @@
 
 // console.log(value);
 export default function getStudentIdsSum(studentList) {
-    return studentList.reduce((a, b) => a + b.id, 0);
+  return studentList.reduce((a, b) => a + b.id, 0);
 }
