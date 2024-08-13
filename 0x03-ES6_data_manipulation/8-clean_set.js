@@ -4,7 +4,9 @@ export default function cleanSet(set, startString) {
   if (startString !== '') {
     cleanArr = (Array.from(set.values())).filter(
       (str) => str.startsWith(startString),
-    ).map((item) => item.replace(startString, ''));
+    ).map((item) => item.replace(startString, '')).filter(
+        val => val !== ''
+    );
   }
 
   const initVal = (cleanArr.length === 0) ? '' : cleanArr[0];
